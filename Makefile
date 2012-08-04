@@ -342,9 +342,11 @@ LINUXINCLUDE    := -Iinclude \
 KBUILD_CPPFLAGS := -D__KERNEL__
 
 KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
-		   -Werror \
+		   #-Werror \
+           -Wno-unused-but-set-variable -Wno-uninitialized \
 		   -fno-strict-aliasing -fno-common \
-		   -Werror-implicit-function-declaration \
+		   #-Werror-implicit-function-declaration \
+           -Wimplicit-function-declaration \
 		   -Wno-format-security \
 		   -fno-delete-null-pointer-checks
 KBUILD_AFLAGS   := -D__ASSEMBLY__
@@ -522,7 +524,7 @@ endif # $(dot-config)
 all: vmlinux
 
 ifdef CONFIG_CC_OPTIMIZE_FOR_SIZE
-KBUILD_CFLAGS	+= -Os
+KBUILD_CFLAGS	+= -Os -mthumb -march=armv7-a -mfpu=neon -mtune=cortex-a8
 else
 KBUILD_CFLAGS	+= -O2
 endif
