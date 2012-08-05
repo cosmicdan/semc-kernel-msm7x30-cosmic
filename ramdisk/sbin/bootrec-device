@@ -11,10 +11,8 @@ echo mass_storage,adb > /sys/class/android_usb/android0/functions
 echo 1 > /sys/class/android_usb/android0/enable
 stop adbd
 
-# trigger blue LED
-echo '255' > /sys/class/leds/blue/brightness
-echo '0' > /sys/class/leds/red/brightness
-echo '0' > /sys/class/leds/green/brightness
+# trigger red LED
+echo '255' > /sys/class/leds/red/brightness
 # trigger button-backlight
 echo '255' > /sys/class/leds/button-backlight/brightness
 # trigger short vibration
@@ -25,9 +23,7 @@ cat /dev/input/event4 > /dev/keycheck1&
 cat /dev/input/event1 > /dev/keycheck2&
 sleep 3
 # switch LED off
-echo '0' > /sys/class/leds/blue/brightness
 echo '0' > /sys/class/leds/red/brightness
-echo '0' > /sys/class/leds/green/brightness
 # trigger button-backlight
 echo '0' > /sys/class/leds/button-backlight/brightness
 
