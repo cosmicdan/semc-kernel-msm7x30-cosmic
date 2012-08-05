@@ -1,2 +1,0 @@
-#ARCH=arm CROSS_COMPILE=/home/cosmicdan/android/android_prebuilt_toolchains/arm-eabi-linaro-4.6.2/bin/arm-eabi- make cyanogen_zeus_defconfig_nodebug_180
-ARCH=arm CROSS_COMPILE=/home/cosmicdan/android/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi- make cyanogen_zeus_defconfig_nodebug_180
