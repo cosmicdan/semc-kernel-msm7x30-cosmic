@@ -234,7 +234,20 @@ config CPU_FREQ_GOV_INTELLIDEMAND
 config SEC_LIMIT_MAX_FREQ
 	bool "Limit Max Freq"
 	help
-		Limit max frequency for Intellidemand. Note from CosmicDan - best leave this
-        off, I don't think it does anything good for single-core devices.
+		Limit max frequency for Intellidemand while screen is on
           
+config INTELLI_MAX_ACTIVE_FREQ
+    int "Max Active Freq for Intellidemand"
+    depends on CPU_FREQ_GOV_INTELLIDEMAND
+    default  1516000
+    help
+      Set default max active frequency for intellidemand
+
+config INTELLI_MAX_INACTIVE_FREQ
+    int "Max Inactive Freq for Intellidemand"
+    depends on CPU_FREQ_GOV_INTELLIDEMAND
+    default  806000
+    help
+      Set default max inactive frequency for intellidemand
+
 endif	# CPU_FREQ
