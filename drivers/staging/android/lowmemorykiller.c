@@ -54,7 +54,7 @@ static int lowmem_minfree_size = 4;
 
 static struct task_struct *lowmem_deathpending;
 static unsigned long lowmem_deathpending_timeout;
-static int fudgeswap = 1024;
+static int fudgeswap = 512;
 
 #define lowmem_print(level, x...)			\
 	do {						\
