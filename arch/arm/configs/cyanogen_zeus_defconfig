@@ -456,7 +456,7 @@ CONFIG_ALIGNMENT_TRAP=y
 #
 CONFIG_ZBOOT_ROM_TEXT=0x0
 CONFIG_ZBOOT_ROM_BSS=0x0
-CONFIG_CMDLINE="console=ttyMSM2,115200n8 androidboot.hardware=semc mtdparts=msm_nand:183808k@94720k(system),525312k(userdata),103936k@940544k(cache),12800k@81920k(boot)"
+CONFIG_CMDLINE="console=ttyMSM2,115200n8 androidboot.hardware=semc"
 # CONFIG_XIP_KERNEL is not set
 # CONFIG_KEXEC is not set
 CONFIG_CRASH_NOTES=y
