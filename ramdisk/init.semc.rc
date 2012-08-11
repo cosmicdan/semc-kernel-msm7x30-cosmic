@@ -62,9 +62,12 @@ on boot
     chmod 0666 /sys/class/leds/lcd-backlight/als/enable
 
     class_start default
-
+    
     #load bcm4329 module
-#    insmod /modules/bcm4329.ko
+    #insmod /modules/bcm4329.ko
+    
+    #install bcm4329 module if needed
+    exec /sbin/sh /res/autowifi.sh    
 
     # USB host support
     mkdir /dev/bus 0771 system system
